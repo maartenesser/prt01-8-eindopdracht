@@ -1,0 +1,97 @@
+body {
+    font-family: "Menlo", Arial, Helvetica, sans-serif;
+    color:white;
+    overflow:hidden;
+    margin:0px; padding:0px;
+    background-color:#333;
+    font-family: 'Press Start 2P', cursive;
+}
+
+game {
+    width:100vw; height:100vh;
+    background-color:black;
+    overflow:hidden;
+}
+
+game * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+foreground {
+    height: 100vh;
+    width: 100vw;
+}
+
+/**************** 
+Background
+****************/
+
+/* 
+    Floor
+*/
+background > floor {
+    background-image: url('../images/floor.png');
+    width: 100vw;
+    height: 75px;
+    position: absolute;
+    margin-top: calc(100vh - 35px);
+    background-size: contain;
+}
+
+/* 
+    Walls
+*/
+background > left-wall, background > right-wall {
+    background-image: url('../images/wall.png');
+    height: 100vw;
+    width: 75px;
+    position: absolute;
+}
+
+background > right-wall {
+    margin-left: calc(100vw - 32.5px);
+}
+
+/* Ceiling */
+background > ceiling {
+    background-image: url('../images/ceiling.png');
+    background-size: contain;
+    height: 75px;
+    width: 100vw;
+    position: absolute;
+}
+
+/**************** 
+Player element
+****************/
+
+/* 
+    Player
+*/
+foreground > player {
+    background-image: url('../images/shooter-back.png');
+    background-size: contain;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    z-index: 10;
+}
+
+/* 
+    Weapons
+*/
+
+/* Arrow */
+foreground > arrow {
+    background-image: url('../images/arrow.png');
+    margin-top: 100vh;
+    height: 100vh;
+    width: 20px;
+    position: absolute;
+    background-size: cover;
+    z-index: 1;
+}
